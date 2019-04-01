@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  LocalEncryptDemo
 //
-//  Created by jiuying on 2019/4/1.
+//  Created by Bennie on 2019/4/1.
 //  Copyright © 2019年 Bennie. All rights reserved.
 //
 

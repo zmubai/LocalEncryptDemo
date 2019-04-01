@@ -13,6 +13,11 @@
 		4FDC2D0F2251F3D100DC0CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC2D0E2251F3D100DC0CB7 /* Assets.xcassets */; };
 		4FDC2D122251F3D100DC0CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC2D102251F3D100DC0CB7 /* LaunchScreen.storyboard */; };
 		4FDC2D152251F3D100DC0CB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D142251F3D100DC0CB7 /* main.m */; };
+		4FDC2D1D2251F49700DC0CB7 /* LocalEncryptService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D1C2251F49700DC0CB7 /* LocalEncryptService.m */; };
+		4FDC2D232251FA4A00DC0CB7 /* NSData+LE.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D212251FA4A00DC0CB7 /* NSData+LE.m */; };
+		4FDC2D242251FA4A00DC0CB7 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D222251FA4A00DC0CB7 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4FDC2D2A2251FAC200DC0CB7 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D272251FAC200DC0CB7 /* SAMKeychain.m */; };
+		4FDC2D2B2251FAC200DC0CB7 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC2D292251FAC200DC0CB7 /* SAMKeychainQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,17 @@
 		4FDC2D112251F3D100DC0CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FDC2D132251F3D100DC0CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FDC2D142251F3D100DC0CB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FDC2D1B2251F49700DC0CB7 /* LocalEncryptService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalEncryptService.h; sourceTree = "<group>"; };
+		4FDC2D1C2251F49700DC0CB7 /* LocalEncryptService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalEncryptService.m; sourceTree = "<group>"; };
+		4FDC2D1E2251FA4A00DC0CB7 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		4FDC2D1F2251FA4A00DC0CB7 /* NSData+LE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LE.h"; sourceTree = "<group>"; };
+		4FDC2D202251FA4A00DC0CB7 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		4FDC2D212251FA4A00DC0CB7 /* NSData+LE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LE.m"; sourceTree = "<group>"; };
+		4FDC2D222251FA4A00DC0CB7 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		4FDC2D262251FAC200DC0CB7 /* SAMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychain.h; sourceTree = "<group>"; };
+		4FDC2D272251FAC200DC0CB7 /* SAMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychain.m; sourceTree = "<group>"; };
+		4FDC2D282251FAC200DC0CB7 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainQuery.h; sourceTree = "<group>"; };
+		4FDC2D292251FAC200DC0CB7 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 				4FDC2D062251F3CF00DC0CB7 /* AppDelegate.m */,
 				4FDC2D082251F3CF00DC0CB7 /* ViewController.h */,
 				4FDC2D092251F3CF00DC0CB7 /* ViewController.m */,
+				4FDC2D2C2252197E00DC0CB7 /* localEncryptService */,
 				4FDC2D0B2251F3CF00DC0CB7 /* Main.storyboard */,
 				4FDC2D0E2251F3D100DC0CB7 /* Assets.xcassets */,
 				4FDC2D102251F3D100DC0CB7 /* LaunchScreen.storyboard */,
@@ -69,6 +86,32 @@
 				4FDC2D142251F3D100DC0CB7 /* main.m */,
 			);
 			path = LocalEncryptDemo;
+			sourceTree = "<group>";
+		};
+		4FDC2D252251FAC200DC0CB7 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC2D262251FAC200DC0CB7 /* SAMKeychain.h */,
+				4FDC2D272251FAC200DC0CB7 /* SAMKeychain.m */,
+				4FDC2D282251FAC200DC0CB7 /* SAMKeychainQuery.h */,
+				4FDC2D292251FAC200DC0CB7 /* SAMKeychainQuery.m */,
+			);
+			path = SAMKeychain;
+			sourceTree = "<group>";
+		};
+		4FDC2D2C2252197E00DC0CB7 /* localEncryptService */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC2D252251FAC200DC0CB7 /* SAMKeychain */,
+				4FDC2D1B2251F49700DC0CB7 /* LocalEncryptService.h */,
+				4FDC2D1C2251F49700DC0CB7 /* LocalEncryptService.m */,
+				4FDC2D202251FA4A00DC0CB7 /* GTMBase64.h */,
+				4FDC2D222251FA4A00DC0CB7 /* GTMBase64.m */,
+				4FDC2D1E2251FA4A00DC0CB7 /* GTMDefines.h */,
+				4FDC2D1F2251FA4A00DC0CB7 /* NSData+LE.h */,
+				4FDC2D212251FA4A00DC0CB7 /* NSData+LE.m */,
+			);
+			path = localEncryptService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDC2D2B2251FAC200DC0CB7 /* SAMKeychainQuery.m in Sources */,
 				4FDC2D0A2251F3CF00DC0CB7 /* ViewController.m in Sources */,
+				4FDC2D242251FA4A00DC0CB7 /* GTMBase64.m in Sources */,
+				4FDC2D1D2251F49700DC0CB7 /* LocalEncryptService.m in Sources */,
 				4FDC2D152251F3D100DC0CB7 /* main.m in Sources */,
+				4FDC2D232251FA4A00DC0CB7 /* NSData+LE.m in Sources */,
+				4FDC2D2A2251FAC200DC0CB7 /* SAMKeychain.m in Sources */,
 				4FDC2D072251F3CF00DC0CB7 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54JV57CX88;
 				INFOPLIST_FILE = LocalEncryptDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54JV57CX88;
 				INFOPLIST_FILE = LocalEncryptDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

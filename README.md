@@ -1,17 +1,6 @@
-//
-//  LocalEncryptService.h
-//  LocalEncryptDemo
-//
-//  Created by Bennie on 2019/4/1.
-//  Copyright © 2019年 Bennie. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface LocalEncryptService : NSObject
-+ (instancetype)shareInstance;
+### 使用说明
+1.相关方法
+```
 /*绑定标识和有效期*/
 - (void)bindSku:(NSString *)sku validityPeriod:(NSNumber *)seconds;
 /*强制清除加密秘钥*/
@@ -20,6 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)encryptAndSaveInfo:(NSString *)info SkuNum:(NSString *)sku;
 /*解密并获取*/
 - (NSString *)decryptAndQueryWithSkuNum:(NSString *)sku error:(NSError **)error;
-@end
+```
+2.关于强制清除加密秘钥
 
-NS_ASSUME_NONNULL_END
+forceClearPriEncryptKeyWithSkuNum这个方法，提供跳过有效期强制刷新加密秘钥的功能。例如重新登录，那么不需要等秘钥过期就可以强制生成新秘钥。

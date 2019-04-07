@@ -42,6 +42,7 @@
 		4FDC2D272251FAC200DC0CB7 /* SAMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychain.m; sourceTree = "<group>"; };
 		4FDC2D282251FAC200DC0CB7 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainQuery.h; sourceTree = "<group>"; };
 		4FDC2D292251FAC200DC0CB7 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainQuery.m; sourceTree = "<group>"; };
+		DB5F26A32259A30D00DF7EB4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		4FDC2CF92251F3CF00DC0CB7 = {
 			isa = PBXGroup;
 			children = (
+				DB5F26A32259A30D00DF7EB4 /* README.md */,
 				4FDC2D042251F3CF00DC0CB7 /* LocalEncryptDemo */,
 				4FDC2D032251F3CF00DC0CB7 /* Products */,
 			);

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*强制清除加密秘钥*/
 - (void)forceClearPriEncryptKeyWithSkuNum:(NSString *)sku;
 /*加密并保存*/
-- (void)encryptAndSaveInfo:(NSString *)info SkuNum:(NSString *)sku;
+- (NSString *)encryptAndSaveInfo:(NSString *)info SkuNum:(NSString *)sku;
 /*解密并获取*/
 - (NSString *)decryptAndQueryWithSkuNum:(NSString *)sku error:(NSError **)error;
 @end

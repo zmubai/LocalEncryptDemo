@@ -39,12 +39,13 @@ static NSString *LEPriPerfix = @"LEP";
     [SAMKeychain deletePasswordForService:sku account:sku];
 }
 /*加密并保存*/
-- (void)encryptAndSaveInfo:(NSString *)info SkuNum:(NSString *)sku;
+- (NSString *)encryptAndSaveInfo:(NSString *)info SkuNum:(NSString *)sku;
 {
     NSString *enInfo = [self encodeWithStr:info sku:sku];
     if (enInfo) {
         [[NSUserDefaults standardUserDefaults] setObject:enInfo forKey:[LEPriPerfix stringByAppendingString:sku]];
     }
+    return enInfo;
 }
 /*解密并获取*/
 - (NSString *)decryptAndQueryWithSkuNum:(NSString *)sku error:(NSError **)error;
@@ -104,6 +105,7 @@ static NSString *LEPriPerfix = @"LEP";
     }
     return k;
 }
+
 ///aes128 + base64
 - (NSString*)encodeWithStr:(NSString *)str sku:(NSString *)sku
 {

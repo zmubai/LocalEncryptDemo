@@ -52,7 +52,10 @@
          [[LocalEncryptService shareInstance] bindSku:self.skuLabel.text validityPeriod:@(self.validitySecondsLabel.text.integerValue)];
     }
 
-    [[LocalEncryptService shareInstance] encryptAndSaveInfo:self.oriTextView.text SkuNum:self.skuLabel.text];
+    NSString *encodeString =  [[LocalEncryptService shareInstance] encryptAndSaveInfo:self.oriTextView.text SkuNum:self.skuLabel.text];
+    UIAlertView *al = [[UIAlertView alloc]initWithTitle:@"加密后内容" message:encodeString delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [al show];
+    self.oriTextView.text = nil;
 }
 
 

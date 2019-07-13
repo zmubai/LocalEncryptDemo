@@ -111,16 +111,16 @@ static NSString *LEPriPerfix = @"LEP";
 {
     NSData *data = [str dataUsingEncoding:NSUTF8StringEncoding];
     NSString *key = [self codeKeyWithSuk:sku error:nil];
-    NSData *aaa = [data AES128EncryptWithKey:key]; // aes加密
+    NSData *aaa = [data le_AES128EncryptWithKey:key]; // aes加密
     NSLog(@"LocalEncryptService:aes128加密后：%@",aaa);
-    NSString *bbb = [NSData encodeBase64Data:aaa];//base64加密
+    NSString *bbb = [NSData le_encodeBase64Data:aaa];//base64加密
     NSLog(@"LocalEncryptService:base64编码后：%@",bbb);
     return bbb;
 }
 
 - (NSString*)decodeWithStr:(NSString *)str sku:(NSString *)sku error:(NSError **)error;
 {
-    NSData *aaa = [NSData decodeBase64String:str];
+    NSData *aaa = [NSData le_decodeBase64String:str];
     NSLog(@"LocalEncryptService:base64解密后：%@",aaa);
     NSError *kError;
     NSString *key = [self codeKeyWithSuk:sku error:&kError];
@@ -131,7 +131,7 @@ static NSString *LEPriPerfix = @"LEP";
         }
         return nil;
     }
-    NSData *bbb = [aaa AES128DecryptWithKey:key];
+    NSData *bbb = [aaa le_AES128DecryptWithKey:key];
     NSString *ccc = [[NSString alloc]initWithData:bbb encoding:NSUTF8StringEncoding];
     NSLog(@"LocalEncryptService:aes128解密后的：%@",ccc);
     return ccc;

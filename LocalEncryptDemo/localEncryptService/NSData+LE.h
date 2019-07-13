@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSData (LM)
 //加密
-+ (NSString*)encodeBase64Data:(NSData *)data;
++ (NSString*)le_encodeBase64Data:(NSData *)data;
 //解密
-+ (NSData*)decodeBase64String:(NSString * )input;
++ (NSData*)le_decodeBase64String:(NSString * )input;
 //加密
-- (NSData *)AES128EncryptWithKey:(NSString *)key;
+- (NSData *)le_AES128EncryptWithKey:(NSString *)key;
 //解密
-- (NSData *)AES128DecryptWithKey:(NSString *)key;
+- (NSData *)le_AES128DecryptWithKey:(NSString *)key;
 @end
 
 NS_ASSUME_NONNULL_END

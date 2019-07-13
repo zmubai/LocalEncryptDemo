@@ -12,20 +12,20 @@
 
 @implementation NSData (LM)
 //加密
-+ (NSString*)encodeBase64Data:(NSData *)data {
++ (NSString*)le_encodeBase64Data:(NSData *)data {
     data = [GTMBase64 encodeData:data];
     NSString *base64String = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return base64String;
 }
 //解密
-+ (NSData*)decodeBase64String:(NSString * )input {
++ (NSData*)le_decodeBase64String:(NSString * )input {
     NSData *data = [input dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
     data = [GTMBase64 decodeData:data];
     return data;
 }
 
 //加密
-- (NSData *)AES128EncryptWithKey:(NSString *)key {
+- (NSData *)le_AES128EncryptWithKey:(NSString *)key {
 
     char keyPtr[kCCKeySizeAES128 + 1];
     memset(keyPtr, 0, sizeof(keyPtr));
@@ -57,7 +57,7 @@
     return nil;
 }
 //解密
-- (NSData *)AES128DecryptWithKey:(NSString *)key {
+- (NSData *)le_AES128DecryptWithKey:(NSString *)key {
     // 'key' should be 32 bytes for AES256, will be null-padded otherwise
     char keyPtr[kCCKeySizeAES128+1]; // room for terminator (unused)
     bzero(keyPtr, sizeof(keyPtr)); // fill with zeroes (for padding)
